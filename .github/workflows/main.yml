@@ -39,6 +39,8 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: ${{ env.ARTIFACT_NAME }}
+        path: .
     
     - name: Test      
       run: dotnet test --no-build --verbosity normal
+
